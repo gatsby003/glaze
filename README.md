@@ -13,7 +13,7 @@ https://glaze-api.herokuapp.com/
 * organise css better (Im thinking sass), even at this stage the css is getting out of hand 
 
 
-Macha because I was a kenny sebastian podcast at the time , lol 
+Macha because I was watching a kenny sebastian podcast at the time , lol 
 
 ![Screenshot from 2021-09-30 15-23-03](https://user-images.githubusercontent.com/63470761/135431043-a0a72c04-249a-4b17-ad48-cb007ef5c4db.png)
 
