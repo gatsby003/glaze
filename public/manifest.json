@@ -1,0 +1,13 @@
+{
+    "name": "Glaze",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "fairly customizable new tab extension",
+    "icons": {
+        "512": "glaze-logo.png"
+    },
+    "browser_action": {
+        "default_icon": "glaze-logo.png",
+        "default_popup": "popup.html"
+    }
+}
