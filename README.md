@@ -13,3 +13,12 @@ https://glaze-api.herokuapp.com/
 * organise css better (Im thinking sass), even at this stage the css is getting out of hand 
 
 
+Macha because I was a kenny sebastian podcast at the time , lol 
+
+![Screenshot from 2021-09-30 15-23-03](https://user-images.githubusercontent.com/63470761/135431043-a0a72c04-249a-4b17-ad48-cb007ef5c4db.png)
+
+Custom greeting , will later shift to a mantra or catch phrase that you can set , yes it assumes its goodevening any time of the day, time based greetings coming soon !
+
+![Screenshot from 2021-09-30 15-23-11](https://user-images.githubusercontent.com/63470761/135431238-8dbcbae1-9250-4008-8b15-7ab9d6d9f5b6.png)
+
+Also the quotes are from the office , any other quoteService PRs , or design / random feedback appreciated!
