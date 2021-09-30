@@ -22,3 +22,10 @@ Custom greeting , will later shift to a mantra or catch phrase that you can set 
 ![Screenshot from 2021-09-30 15-23-11](https://user-images.githubusercontent.com/63470761/135431238-8dbcbae1-9250-4008-8b15-7ab9d6d9f5b6.png)
 
 Also the quotes are from the office , any other quoteService PRs , or design / random feedback appreciated!
+
+
+# Setup instructions : 
+
+* go to root 
+* npm install
+* npm start
