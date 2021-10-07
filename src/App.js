@@ -4,6 +4,7 @@ import TimeAndGreeting from './components/TimeAndGreeting/TimeAndGreeting'
 import Quote from './components/Quote'
 import { initBg } from './reducers/backgroundReducer'
 import { useDispatch } from 'react-redux'
+import { initQuotes } from './reducers/quoteReducer'
 
 const App = () => {
 
@@ -11,6 +12,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(initBg())
+    dispatch(initQuotes())
   },[dispatch])
   
   return (

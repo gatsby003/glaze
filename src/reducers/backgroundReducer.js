@@ -1,4 +1,4 @@
-import backgroundService from "../services/backgroundService"
+import backgroundService from "../services/background"
 import dates from "../dates"
 
 const backgroundReducer = (state = null, action) => {

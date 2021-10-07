@@ -1,10 +1,8 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import axios from "axios";
 import { useSelector } from "react-redux";
 
 const Main = (props) => {
-    const backgrounds = useSelector(state => state)
+    const backgrounds = useSelector(state => state.background)
 
     const MainStyle = {
       height: "100vh",
@@ -24,7 +22,7 @@ const Main = (props) => {
       MainStyle.backgroundImage = `url(${backgrounds.today})`
     }else {
       // quick fix : react transitions coming soon
-      MainStyle.backgroundImage = `url(${'https://miro.medium.com/max/880/0*H3jZONKqRuAAeHnG.jpg'})`
+      MainStyle.backgroundImage = ""
     }
 
     return (

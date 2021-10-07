@@ -1,25 +1,10 @@
 import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
-import axios from "axios";
+import { useSelector }from 'react-redux'
 const Quote = () => {
-    const [quote, setQuote] = useState("");
 
-    useEffect(() => {
-      const url = "https://glaze-api.herokuapp.com/quote/"
-      const getQuote = async () => {
-        const result = await axios.get(url)
-        console.log(result)
-        localStorage.setItem("quoteForToday", result.data)
-        setQuote(result.data)
-      }
-      if (localStorage.getItem("quoteForToday")){
-        setQuote(localStorage.getItem("quoteForToday"))
-      }else {
-        getQuote()
-      }
-    }, [])
 
+    const quote = useSelector(state => state.quote)
+    console.log(quote)
     const quoteStyle = {
       fontSize : "15px", 
       color : "white", 
