@@ -3,7 +3,8 @@ import quoteService from "../services/quotes";
 const quoteReducer = (state = "", action) => {
     switch(action.type){
         case 'INITQUOTE':
-            console.log(action.data)
+            return action.data
+        case "CHANGEQUOTE":
             return action.data
         default:
             return state
@@ -23,6 +24,18 @@ export const initQuotes = () => {
 
         return dispatch({
             type : 'INITQUOTE',
+            data : quote
+        })
+    }
+}
+
+export const changeQuote = () => {
+    return async dispatch => {
+        const quote = await quoteService.getQuotes()
+        localStorage.setItem("quoteForToday", quote)
+
+        return dispatch({
+            type : 'CHANGEQUOTE',
             data : quote
         })
     }

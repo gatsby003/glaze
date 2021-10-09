@@ -4,10 +4,12 @@ import {composeWithDevTools} from 'redux-devtools-extension'
 
 import backgroundReducer from "./reducers/backgroundReducer";
 import quoteReducer from "./reducers/quoteReducer";
+import loader from './reducers/loader';
 
 const reducer = combineReducers({
     background : backgroundReducer,
-    quote : quoteReducer
+    quote : quoteReducer,
+    load : loader,
 })
 
 const store = createStore(

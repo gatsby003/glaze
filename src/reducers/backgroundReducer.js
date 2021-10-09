@@ -5,6 +5,8 @@ const backgroundReducer = (state = null, action) => {
     switch(action.type){
         case 'INIT':
             return action.data
+        case 'CHANGE_BG':
+            return action.data
         default:
             return state
     }
@@ -13,6 +15,21 @@ const backgroundReducer = (state = null, action) => {
 // reducer to set images and cache for tomorrow ,
 // currrently switches to yesterdays image if internet is off 
 // ideally should randomly select from the cache 
+export const changeBg = () => {
+    return async dispatch => {
+        const today = dates.getToday()
+
+        const result = await backgroundService.getBackGrounds()
+        localStorage.setItem(today, JSON.stringify(result.today))
+        return dispatch({
+            type : 'CHANGE_BG',
+            data : result.today,
+        })
+    }
+}
+
+
+
 export const initBg = () => {
     return async dispatch => {
 
@@ -24,7 +41,7 @@ export const initBg = () => {
         const cache = await caches.open('glaze-cache')
 
         if (localStorage.getItem(today)){
-            backgrounds.today = JSON.parse(localStorage.getItem(today))
+            backgrounds = JSON.parse(localStorage.getItem(today))
         }else {
             try {
                 backgrounds = await backgroundService.getBackGrounds()
@@ -34,12 +51,11 @@ export const initBg = () => {
                 localStorage.setItem(today, JSON.stringify(backgrounds.today))
                 localStorage.setItem(tomorrow, JSON.stringify(backgrounds.tomorrow))
             } catch(e) {
-                backgrounds.today = JSON.parse(localStorage.getItem(yesterday))
+                backgrounds = JSON.parse(localStorage.getItem(yesterday))
             }
-           
         }
 
-        dispatch({
+        return dispatch({
             type : 'INIT',
             data : backgrounds
         })
