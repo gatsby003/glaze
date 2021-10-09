@@ -1,0 +1,93 @@
+.main {
+    height : 100vh;
+    margin : 0;
+ 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+ 
+    display: flex;
+    flex-direction: column;
+ 
+}
+ 
+.endBar {
+    height : 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+ 
+.centerBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height : 40%;
+}
+ 
+.midBar {
+    height : 20%;
+}
+
+.quote {
+    display: flex;
+    font-size : 13px;
+    color : white; 
+    font-family : monospace; 
+    font-weight: lighter;
+    margin-bottom : 5px;
+    text-align : center;
+    overflow: hidden;
+    justify-content: center;
+    width : 50%;
+    height: 100%;
+}
+
+.greeting {
+    color : white;
+    margin-top : -8px;
+    width : 50%;
+    font-size : 30px;
+    background : none;
+    outline: none;
+    border : none;
+    text-align : center;
+    border-bottom : 2px solid white; 
+    font-family : monospace; 
+}
+
+.preGreeting {
+    color : white;
+    text-align : center;
+    font-size : 50px;
+    font-family : sans;
+    font-weight : 500;
+    letter-spacing : -0.05em;
+    word-spacing : -0.1em;
+    margin-top : 0px;
+}
+
+
+.credit {
+    display: flex;
+    width: 100px;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    padding: 10px;
+}
+
+.credit_text {
+    font-family: monospace;
+    font-size: smaller;
+    font-weight: lighter;
+    margin : 0;
+}
+
+
+.quote_text {
+    font-family: monospace;
+    font-weight: 100;
+}

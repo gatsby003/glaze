@@ -1,12 +1,13 @@
 import React from "react";
 import Time from "./Time";
 import Greeting from "./Greeting";
+import styles from '../../styles.module.css'
 
 const TimeAndGreeting = () => {
 
     return (
-        <div style={{display : "flex", flexDirection : "column", alignItems : "center", justifyContent: "flex-end"}}>
-            <Time/> 
+        <div className={styles.centerBar}>
+            <Time/>
             <Greeting/>
         </div>
     )

@@ -1,34 +1,27 @@
 import React from "react";
 import { useSelector } from "react-redux";
-
-const Main = (props) => {
+import styles from '../styles.module.css'
+import MidBar from '../components/MidBar/MidBar'
+import EndBar from '../components/EndBar/EndBar'
+import TopBar from "./TopBar.js/TopBar";
+const Main = () => {
     const backgrounds = useSelector(state => state.background)
-
-    const MainStyle = {
-      height: "100vh",
-      margin: "0%",
-
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "cover",
-
-      display : "flex",
-      flexDirection : "column",
-      justifyContent : "space-between",
-      alignItems : "center"
+    var imageUrl = ""
+    if (backgrounds){
+      console.log(backgrounds)
+      imageUrl = backgrounds.today.url
     }
-
-    if (backgrounds) {
-      MainStyle.backgroundImage = `url(${backgrounds.today})`
-    }else {
-      // quick fix : react transitions coming soon
-      MainStyle.backgroundImage = ""
-    }
+    console.log(imageUrl)
 
     return (
-      <div style={MainStyle}>  
-        {props.children}
+      <div style={{backgroundImage : `url(${imageUrl})`}} className={styles.main} >
+      <TopBar/>
+      <div className={styles.midBar}></div>
+      <MidBar />
+      <div className={styles.midBar}>
       </div>
+      <EndBar />
+    </div>
     )
 }
 

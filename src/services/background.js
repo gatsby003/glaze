@@ -5,8 +5,8 @@ const api = "https://glaze-api.herokuapp.com/background"
 const asObject = (result) => {
     return (
         {
-            today : result.today.urls.full,
-            tomorrow : result.tomorrow.urls.full,
+            today : result.today,
+            tomorrow : result.tomorrow,
         }
     )
 }

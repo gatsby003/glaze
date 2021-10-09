@@ -24,17 +24,17 @@ export const initBg = () => {
         const cache = await caches.open('glaze-cache')
 
         if (localStorage.getItem(today)){
-            backgrounds.today = localStorage.getItem(today)
+            backgrounds.today = JSON.parse(localStorage.getItem(today))
         }else {
             try {
                 backgrounds = await backgroundService.getBackGrounds()
                 console.log(backgrounds)
-                cache.add(backgrounds.today)
-                cache.add(backgrounds.tomorrow)
-                localStorage.setItem(today, backgrounds.today)
-                localStorage.setItem(tomorrow, backgrounds.tomorrow)
+                cache.add(backgrounds.today.url)
+                cache.add(backgrounds.tomorrow.url)
+                localStorage.setItem(today, JSON.stringify(backgrounds.today))
+                localStorage.setItem(tomorrow, JSON.stringify(backgrounds.tomorrow))
             } catch(e) {
-                backgrounds.today = localStorage.getItem(yesterday)
+                backgrounds.today = JSON.parse(localStorage.getItem(yesterday))
             }
            
         }
