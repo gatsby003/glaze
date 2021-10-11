@@ -8,9 +8,9 @@ https://glaze-api.herokuapp.com/
 
 # Next I plan to 
 
-* add more customization options to the user
-* do a redux re-write since i think state managaement will be a pain as the app grows
-* organise css better (Im thinking sass), even at this stage the css is getting out of hand 
+* ~~add more customization options to the user~~
+* ~~do a redux re-write since i think state managaement will be a pain as the app grows
+* ~~organise css better , even at this stage the css is getting out of hand 
 
 
 Macha because I was watching a kenny sebastian podcast at the time , lol 
