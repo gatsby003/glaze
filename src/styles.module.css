@@ -13,11 +13,12 @@
 }
  
 .endBar {
-    height : 10%;
+    height : 15%;
     display: flex;
     justify-content: center;
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom : 5px;
 }
  
 .centerBar {
@@ -31,18 +32,6 @@
     height : 20%;
 }
 
-.quote {
-    display: flex;
-    font-size : 13px;
-    color : white; 
-    font-family : monospace; 
-    font-weight: lighter;
-    text-align : center;
-    overflow: hidden;
-    justify-content: center;
-    width : 50%;
-    height: 100%;
-}
 
 .greeting {
     color : white;
@@ -72,7 +61,7 @@
 .credit {
     display: flex;
     width: 100px;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     color: white;
     padding: 10px;
@@ -85,8 +74,61 @@
     margin : 0;
 }
 
+.change_bg_hidden {
+    display: block;
+    visibility: hidden;
+}
+
+.change_bg_active {
+    display: block;
+}
+
+
+.quote {
+    display: flex;
+    font-size : 13px;
+    color : white; 
+    font-family : monospace; 
+    font-weight: lighter;
+    text-align : center;
+    overflow: hidden;
+    justify-content: center;
+    width : 50%;
+    height: 100%;
+}
+
+.quote:hover {
+    display: flex;
+    font-size : 13px;
+    color : white; 
+    font-family : monospace; 
+    font-weight: lighter;
+    text-align : center;
+    overflow: hidden;
+    justify-content: center;
+    width : 50%;
+    height: 100%;
+}
+
 
 .quote_text {
+    display: flex;
+    align-items: flex-end;
     font-family: monospace;
     font-weight: 100;
 }
+
+
+
+
+.quote_change_active {
+    display: flex;
+    align-items: center;
+}
+
+.quote_change_hidden {
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+}
+

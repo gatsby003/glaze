@@ -9,7 +9,6 @@ const EndBar = () => {
             <Credit />
             <Quote/>
             <div style={{display : "flex", width: "50px"}}>
-                p
             </div>
         </div>
     )
