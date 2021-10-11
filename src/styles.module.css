@@ -25,11 +25,49 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height : 40%;
 }
  
 .midBar {
     height : 20%;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+}
+
+.clock_left_active {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20px;
+}
+
+.clock_left_hidden {
+    visibility: hidden;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20px;
+}
+
+.clock_right_active {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20px;
+}
+
+.clock_right_hidden {
+    visibility: hidden;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20px;
 }
 
 
