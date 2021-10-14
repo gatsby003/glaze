@@ -1,6 +1,6 @@
 # Glaze 
 
-Glaze is a new tab extension , based primarily on productivity and great UX, it is still in early phase of development, I have only pushed the create-react-app build for now, but I plan to push the extension version along with build instructions in a few days. Currently glaze has the functionality of setting a nice backgorund with a clock + greeting feature. 
+Glaze is a new tab extension , based primarily on productivity and great UX, Currently glaze has the functionality of setting a nice backgorund with a clock + greeting feature. 
 
 Currently the frontend fetches state from the glaze-api which Im developing locally.
 
@@ -13,7 +13,6 @@ https://glaze-api.herokuapp.com/
 ![Screenshot from 2021-09-30 15-23-11](https://user-images.githubusercontent.com/63470761/135431238-8dbcbae1-9250-4008-8b15-7ab9d6d9f5b6.png)
 
 Also the quotes are from the office , any other quoteService PRs , or design / random feedback appreciated!
-
 
 # Setup instructions : 
 
