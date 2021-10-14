@@ -53,6 +53,7 @@
     width: 20px;
 }
 
+
 .clock_right_active {
     color: white;
     display: flex;
@@ -156,9 +157,6 @@
     font-weight: 100;
 }
 
-
-
-
 .quote_change_active {
     display: flex;
     align-items: center;
@@ -170,3 +168,30 @@
     visibility: hidden;
 }
 
+.toggle_visible {
+    display : block
+}
+
+.toggle_hidden {
+    display: none;
+}
+
+
+.default_time_hidden {
+    display: none;
+}
+
+.pomodor_hidden {
+    display: block;
+}
+
+.clock_container_visible {
+    display: flex;
+    align-self: center;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.clock_container_hidden {
+    display: none;
+}
