@@ -4,7 +4,6 @@ import Greeting from "./Greeting";
 import Pomodoro from "../Pomodoro"
 import styles from '../../styles.module.css'
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import { ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { AccessAlarm } from "@mui/icons-material";
 
@@ -22,10 +21,10 @@ const TimeAndGreeting = () => {
     const handleToggle = (event, clockType) => {
         console.log(clockType)
         setClockType(clockType)
-        if (clockType == 'default'){
+        if (clockType === 'default'){
             setClock(true)
             setPomodoro(false)
-        }else if (clockType == 'pomodoro') {
+        }else if (clockType === 'pomodoro') {
             setClock(false)
             setPomodoro(true)
         }

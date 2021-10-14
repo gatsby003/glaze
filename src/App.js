@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import { initBg } from './reducers/backgroundReducer'
 import { useDispatch, useSelector } from 'react-redux'
 import { initQuotes } from './reducers/quoteReducer'
@@ -14,7 +14,6 @@ const App = () => {
   useEffect(() => {
     dispatch(initBg())
     dispatch(initQuotes())
-    dispatch(loaderOff())
   },[dispatch])
   
   return (

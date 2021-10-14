@@ -14,11 +14,6 @@ export const loaderOn = () => {
         dispatch({
             type : 'ON'
         })
-        setTimeout(() => {
-            dispatch({
-                type : 'OFF'
-            })
-        }, 2000);
     }   
 }
 
