@@ -15,7 +15,7 @@ const Quote = () => {
 
     return (
         <div className={styles.quote}
-            onMouseEnter={e => {
+            onMouseOver={e => {
                 console.log('mouse entered')
                 e.preventDefault()
                 setStyle(styles.quote_change_active)}}

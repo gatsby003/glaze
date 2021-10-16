@@ -9,19 +9,26 @@ import { NextPlan } from "@mui/icons-material";
 
 
 const Credit = () => {
-    const state = useSelector(state => state.background)
+    const backgroundState = useSelector(state => state.background)
     const [style, setStyle] = useState(styles.change_bg_hidden)
     const dispatch = useDispatch()
+    console.log(backgroundState)
+    if (backgroundState){
+        var username;
+        try {
+            username = backgroundState.user.username
+        }catch {
+            username = ""
+        }
 
-    if (state){
-        const user = state.user
+
         return (
             <div className={styles.credit}
-                onMouseEnter={e => setStyle(styles.change_bg_active)}
+                onMouseOver={e => setStyle(styles.change_bg_active)}
                 onMouseLeave={e => setStyle(styles.change_bg_hidden)}
                 >
                 <p className={styles.credit_text}>Unsplash</p>
-                <p className={styles.credit_text}>{user.username}</p>
+                <p className={styles.credit_text}>{username}</p>
                 <div className={style}>
                 <NextPlan onClick={() => {
                     dispatch(loaderOn())
@@ -30,7 +37,7 @@ const Credit = () => {
             </div>
         )
     }else {
-        return (<></>)
+        return (null)
     }
 
 }

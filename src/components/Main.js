@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styles from '../styles.module.css'
 import MidBar from '../components/MidBar/MidBar'
@@ -9,20 +9,16 @@ import { loaderOff } from "../reducers/loader";
 const Main = () => {
     const backgrounds = useSelector(state => state.background)
     const dispatch = useDispatch()
+    const [imageUrl, setImageUrl] = useState("")
 
 
     useEffect(() => {
       if (backgrounds != null){
+        setImageUrl(backgrounds.url)
         dispatch(loaderOff())
       }
     }, [backgrounds, dispatch])
 
-
-    var imageUrl = ""
-    if (backgrounds){
-      imageUrl = backgrounds.url
-    }
-    console.log(imageUrl)
 
     return (
       <div style={{backgroundImage : `url(${imageUrl})`}} className={styles.main} >

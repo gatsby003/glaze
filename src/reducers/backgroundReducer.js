@@ -35,29 +35,25 @@ export const initBg = () => {
 
         const today = dates.getToday()
         const tomorrow = dates.getTomorrow()
-        const yesterday = dates.getYesterday()
 
-        var backgrounds = {}
+        var backgrounds = null
         const cache = await caches.open('glaze-cache')
 
-        if (localStorage.getItem(today)){
-            backgrounds = JSON.parse(localStorage.getItem(today))
-        }else {
-            try {
-                backgrounds = await backgroundService.getBackGrounds()
-                console.log(backgrounds)
-                cache.add(backgrounds.today.url)
-                cache.add(backgrounds.tomorrow.url)
-                localStorage.setItem(today, JSON.stringify(backgrounds.today))
-                localStorage.setItem(tomorrow, JSON.stringify(backgrounds.tomorrow))
-            } catch(e) {
-                backgrounds = JSON.parse(localStorage.getItem(yesterday))
-            }
+        try {
+            backgrounds = await backgroundService.getBackGrounds()
+            console.log(backgrounds)
+            cache.add(backgrounds.today.url)
+            cache.add(backgrounds.tomorrow.url)
+            localStorage.setItem(today, JSON.stringify(backgrounds.today))
+            localStorage.setItem(tomorrow, JSON.stringify(backgrounds.tomorrow))
+        } catch(e) {
+            console.log("error fetching backgrounds")
         }
+        
 
         return dispatch({
             type : 'INIT',
-            data : backgrounds
+            data : backgrounds.today
         })
     }
 }

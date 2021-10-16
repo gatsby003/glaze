@@ -5,13 +5,14 @@ import Pomodoro from "../Pomodoro"
 import styles from '../../styles.module.css'
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import { ToggleButton, ToggleButtonGroup } from "@mui/material";
-import { AccessAlarm } from "@mui/icons-material";
+import { AccessAlarm, MoreHoriz } from "@mui/icons-material";
 
 
 const TimeAndGreeting = () => {
     const [leftstyle, setRightStyle] = useState(styles.clock_left_hidden)
     const [rightstyle, setLeftStyle] = useState(styles.clock_right_hidden)
     const [toggleStyle, setToggleStyle] = useState("hidden")
+    // refactor idea , send clockType as prop to clock and pomodoro
     const [clockType, setClockType] = useState("default")
 
     const [clock, setClock] = useState(true)
@@ -68,7 +69,7 @@ const TimeAndGreeting = () => {
                 <Time showClock={clock}/>
                 <Pomodoro showPomodoro={pomodoro}/>
                 <div className={rightstyle}>
-                    {/* <MoreHorizIcon/> */}
+                    <MoreHoriz/>
                 </div>
             </div>
             <Greeting/>
