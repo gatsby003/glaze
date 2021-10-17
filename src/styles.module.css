@@ -168,15 +168,13 @@
     visibility: hidden;
 }
 
-.toggle_visible {
+/* .toggle_visible {
     display : block;
-    z-index : 19;
 }
 
 .toggle_hidden {
     display: none;
-    z-index : 19;
-}
+} */
 
 
 .default_time_hidden {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { changeBg } from "../../reducers/backgroundReducer";
+import { backgroundChangeTransition, changeBg } from "../../reducers/backgroundReducer";
 import {useDispatch} from 'react-redux'
 import styles from "../../styles.module.css" 
 import {loaderOn } from "../../reducers/loader";

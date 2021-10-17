@@ -50,12 +50,13 @@ const TimeAndGreeting = () => {
                         toggleStyle === "hidden" ? setToggleStyle("visible") : setToggleStyle("hidden") 
                     }}                    
                     />
-                    <div style={{visibility : toggleStyle}}>
+                    <div style={{visibility : toggleStyle, zIndex : 10, position : "fixed"}}>
                         <ToggleButtonGroup
                             color="primary"
                             value={clockType}
                             exclusive
                             onChange={handleToggle}
+                            style = {{backgroundColor : "white"}}
                         >
                             <ToggleButton value="pomodoro">
                                 <AccessAlarm/>

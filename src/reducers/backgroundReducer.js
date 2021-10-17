@@ -7,6 +7,8 @@ const backgroundReducer = (state = null, action) => {
             return action.data
         case 'CHANGE_BG':
             return action.data
+        case 'BG_TRANSITION':
+            return null
         default:
             return state
     }
@@ -24,6 +26,14 @@ export const changeBg = () => {
         return dispatch({
             type : 'CHANGE_BG',
             data : result.today,
+        })
+    }
+}
+
+export const backgroundChangeTransition = () => {
+    return async dispatch => {
+        return dispatch({
+            type : 'BG_TRANSITION',
         })
     }
 }
